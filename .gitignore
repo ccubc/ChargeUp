@@ -1,3 +1,7 @@
-data/cleaned/*
-data/raw/*
-data/processed/*
+data/cleaned
+data/raw
+data/processed
+graphs
+notebooks/.ipynb_checkpoints
+webapp/maps
+webapp/data
