@@ -5,3 +5,6 @@ graphs
 notebooks/.ipynb_checkpoints
 webapp/maps
 webapp/data
+webapp/static/maps
+webapp/static/data
+notebooks/archive

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Charge up</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="../static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="../static/css/stylish-portfolio.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+
+  <!-- Header -->
+  <header class="masthead d-flex">
+    <div class="container text-center my-auto">
+      <h1 class="mb-1">Charge Up</h1>
+      <h3 class="mb-5">
+        <em>Finding out the Optimal Locations for Extra Electric Car Charging Stations in City of Toronto</em>
+      </h3>
+    </div>
+    <div class="overlay"></div>
+  </header>
+
+
+
+     <!-- Try Section -->
+    <section class="bg-primary mb-0" id="try">
+      <div class="container">
+        <hr class="star-light mb-5">
+        <h5> EVPR = Electric Vehicle Penetration Ratio (Out of all cars, how many are electric?) </h5>
+        <h5> HCR = Home Charging Ratio (Out of all electric car drivers, how many can charge at home?) </h5>
+        <hr class="star-light mb-5">
+              <div class="col-sm m-3 text-center">
+                    <form action="/output" method="POST" id="user_input">
+                      <div style="width: 100%;">
+                      <h4> Electric Vehicle Penetration Ratio </h4>
+                          <div class="slidecontainer">
+                              <input type="range" min="0" max="0.2" step = "0.01" value="0.01" class="slider" id="myRange1", name="slider1">
+                               <p>Value: <span id="demo1"></span></p>
+                          </div>
+                      </div>
+                      <div style="width: 100%;">
+                      <h4> Home Charging Ratio </h4>
+                          <div class="slidecontainer">
+                              <input type="range" min="0.5" max="0.9" step = "0.02" value="0.6" class="slider" id="myRange2", name="slider2">
+                               <p>Value: <span id="demo2"></span></p>
+
+                          </div>
+                      </div>
+                    </form>
+                         <div class="row justify-content-center">
+             <button type="submit" class="btn btn-secondary btn-lg" form="user_input">Find Optimal Locations!</button>
+             <a class="btn btn-secondary btn-lg" href="{{map_html}}">Show on map!</a>
+      </div>
+ 
+              </div>
+      
+        <div class="row mt-4 justify-content-center">
+          <h2 class="text-light text-center text-uppercase">See Optimal Locations of Extra Charging Stations Below.</h2>
+          {% for table in tables %}
+            {{ table|safe }}
+            {% endfor %}
+        </div>
+
+
+      </div>
+    </section>
+    
+
+<script>
+var slider1 = document.getElementById("myRange1");
+var output1 = document.getElementById("demo1");
+output1.innerHTML = slider1.value;
+var slider2 = document.getElementById("myRange2");
+var output2 = document.getElementById("demo2");
+output2.innerHTML = slider2.value;
+slider1.oninput = function() {
+  output1.innerHTML = this.value;
+}
+slider2.oninput = function() {
+  output2.innerHTML = this.value;
+}
+
+</script>
+    
+
+        <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../static/js/stylish-portfolio.min.js"></script>
+  </body>
+
+
+</html>
