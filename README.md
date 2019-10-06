@@ -13,7 +13,6 @@ Please run `pip install -r requirements.txt` on your virtual environment to inst
 * Constraints:  <br>
 (1) Charging demand at each destination places should be satisfied.<br>
 (2) Charging capacity does not surpass each station's limit
-* Formulation: 
 ![formulation](https://github.com/ccubc/Insight-Project/blob/master/screenshots/optimization_formulation.png)
 
 
