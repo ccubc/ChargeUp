@@ -7,30 +7,12 @@ Many potential electric vehicle (EV) buyers are frustrated by the fact that the 
 ## Packages
 Please run `pip install -r requirements.txt` on your virtual environment to install the required python packages to run. This project solves the **optimization** problem using Pulp, **visualizes** the final result using Folium, and deploys the **web app** using Flask. 
 
-## Optimization Model
-* The decision: choosing a subset of parking lots to install chargers.
+## Optimization Model  
+* The decision: choosing a subset of parking lots to install chargers (level II EV charger). 
 * Objective: Minimizing (the cost of installing chargers + electric car drivers' travel cost from the charging station to their travel destination)
 * Constraints:  <br>
 (1) Charging demand at each destination places should be satisfied.<br>
-(2) Charging capacity does not surpass each station's limit
+(2) Charging capacity does not exceed each station's limit
 
 ### Model Formulation
-
-
-* Objective: minimizing total cost (cost of installing chargers + cost of travelling between charge point and destination)
-* Demand at all places need to be satisfied.
-* Charging capacity is not surpassed at each charging station. <br><br>
-* The optimization problem is summarized as: 
-$$\min \sum^m_{j=1}f_j y_j + \sum^n_i \sum^m_j c_{ij}x_{ij}$$
-$$ \mathrm{s.t.}\ \sum^m_{j=1}x_{ij} = d_i,\ \ \ \ i = 1,...,n$$
-$$ \ \ \ \ \ \sum^n_{i=1}x_{ij} \leqslant M_j y_j, \ \ \ \ j = 1,...,m$$
-$$ \ \ \ \ \ x_{ij}\leqslant d_i y_j, \ \ \ \ i = 1,...,n$$
-$$ \ \ \ x_{ij}\geqslant 0 $$
-$$ \ \ \ y_j \in \{0,\ 1\}$$
-* $f_j$ = fixed cost of charging station at location $j$,  
-* $y_j \in \{0,1\}$ indicates whether to build a charging station at location $j$,  
-* $c_{ij}$ is the travel cost for person at desired destination location $i$ to charging station at location $j$,  
-* $x_{ij}$ is the demand of charging by person at location $i$ that will be covered by charging station at location $j$,
-* $M_j$ is the capacity of charging at location $j$,
-* $d_i$ is demand of charging at destination location $i$.
-
+![formulation](https://github.com/ccubc/Insight-Project/blob/master/screenshots/formulation.png)
