@@ -1,6 +1,6 @@
 # ChargeUp 
  
- [Presentation slides](https://drive.google.com/open?id=1ntPTFZRM_EoCcSugZF-p2skCiyNdUgxcnH89xkh76u4)
+ [See Presentation Slides](https://drive.google.com/open?id=1ntPTFZRM_EoCcSugZF-p2skCiyNdUgxcnH89xkh76u4)
 
 Many potential electric vehicle (EV) buyers are frustrated by the fact that the current charging station network is still underdeveloped. The terminology "range anxiety" describes the situation where EV owners are worried about exhausting their EV battery in a trip. Currently, most EV owners have access to home charging, whereas home charging is almost impossible for those living in an apartment or a condo. Therefore, to push EV sales to the next stage, it is necessary to grow the charging network. The federal government is investing \$ 182.5 million in an initiative that includes a coast-to-coast network of chargers. A natural question to ask is: **where to optimally locate them so that total social cost is minimized**? 
 
