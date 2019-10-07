@@ -36,7 +36,15 @@ The optimization results are very sensitive to both the budget and the penalty, 
 
 ## The Web App
 This section briefly explains the [web app](http://chargeuptoronto.ca). User will land on the home page and be asked to input two parameters: Electric Vehicle Penetration Ratio (among all cars, what percentage is electric) and Home Charging Ratio (among all EV drivers, what percentage has access to home charging), which are the two most important parameters in determining demand for charging. 
-### Landing Page and User Input
+#### Landing Page and User Input
 ![user-input](https://github.com/ccubc/Insight-Project/blob/master/screenshots/webapp_1.png)
+After the user clicks the button "Find Optimal Locations", the web app will show a table of parking lots that are optimal locations to install chargers. 
+#### Output table
+![output-table](https://github.com/ccubc/Insight-Project/blob/master/screenshots/webapp_2.png)
+The user could also explore the results on a map.
+#### Explore results on a map
+![explore-map1](https://github.com/ccubc/Insight-Project/blob/master/screenshots/webapp_3.png)
+![explore-map2](https://github.com/ccubc/Insight-Project/blob/master/screenshots/webapp_4.png)
+
 
 
