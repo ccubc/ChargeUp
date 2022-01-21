@@ -10,4 +10,4 @@ shapely==1.6.4.post2
 folium==0.10.0
 scipy==1.1.0
 pulp==1.6.10
-IPython==6.0.0
+IPython==7.16.3
