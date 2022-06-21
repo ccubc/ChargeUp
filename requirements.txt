@@ -1,7 +1,7 @@
 python==3.6.9
 googleplaces==1.4.1
 pandas==0.19.2
-numpy==1.15.4
+numpy==1.22.0
 matplotlib==2.0.0
 geopandas==0.5.1
 sklearn==0.20.1
